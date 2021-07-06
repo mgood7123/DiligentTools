@@ -119,9 +119,6 @@ private:
 
     std::atomic<APP_STATUS_FLAGS> app_status_{APP_STATUS_FLAG_NONE};
 
-    int32_t window_width_  = 0;
-    int32_t window_height_ = 0;
-
     ASensorManager*    sensor_manager_       = nullptr;
     const ASensor*     accelerometer_sensor_ = nullptr;
     ASensorEventQueue* sensor_event_queue_   = nullptr;
