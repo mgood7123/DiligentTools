@@ -27,7 +27,7 @@
 
 #pragma once
 
-#include "../../../DiligentCore/Primitives/interface/FileStream.h"
+#include "../../../../MultiTouch/DiligentLog/Primitives/interface/FileStream.h"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/RenderDevice.h"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/Texture.h"
 
@@ -89,7 +89,7 @@ struct TextureLoadInfo
 typedef struct TextureLoadInfo TextureLoadInfo;
 // clang-format on
 
-#include "../../../DiligentCore/Primitives/interface/DefineGlobalFuncHelperMacros.h"
+#include "../../../DiligentLog/Primitives/interface/DefineGlobalFuncHelperMacros.h"
 
 /// Creates a texture from 2D image
 
@@ -129,6 +129,6 @@ void DILIGENT_GLOBAL_FUNCTION(CreateTextureFromKTX)(const void*               pK
                                                     IRenderDevice*            pDevice,
                                                     ITexture**                ppTexture);
 
-#include "../../../DiligentCore/Primitives/interface/UndefGlobalFuncHelperMacros.h"
+#include "../../../DiligentLog/Primitives/interface/UndefGlobalFuncHelperMacros.h"
 
 DILIGENT_END_NAMESPACE // namespace Diligent

@@ -28,7 +28,7 @@
 #pragma once
 
 #include <memory>
-#include "../../../DiligentCore/Primitives/interface/BasicTypes.h"
+#include "../../../../MultiTouch/DiligentLog/Primitives/interface/BasicTypes.h"
 #include "../../../DiligentCore/Common/interface/BasicMath.hpp"
 #include "../../../DiligentCore/Common/interface/RefCntAutoPtr.hpp"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/GraphicsTypes.h"

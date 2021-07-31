@@ -28,8 +28,8 @@
 #pragma once
 
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/GraphicsTypes.h"
-#include "../../../DiligentCore/Primitives/interface/FileStream.h"
-#include "../../../DiligentCore/Primitives/interface/DataBlob.h"
+#include "../../../../MultiTouch/DiligentLog/Primitives/interface/FileStream.h"
+#include "../../../../MultiTouch/DiligentLog/Primitives/interface/DataBlob.h"
 
 #if DILIGENT_CPP_INTERFACE
 #    include <vector>

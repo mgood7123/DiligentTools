@@ -29,7 +29,7 @@
 
 #include <vector>
 
-#include "../../../DiligentCore/Primitives/interface/BasicTypes.h"
+#include "../../../../MultiTouch/DiligentLog/Primitives/interface/BasicTypes.h"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/RenderDevice.h"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/DeviceContext.h"
 #include "../../../DiligentCore/Graphics/GraphicsEngine/interface/Buffer.h"

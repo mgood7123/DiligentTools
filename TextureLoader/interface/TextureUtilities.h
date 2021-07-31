@@ -38,7 +38,7 @@
 DILIGENT_BEGIN_NAMESPACE(Diligent)
 
 
-#include "../../../DiligentCore/Primitives/interface/DefineGlobalFuncHelperMacros.h"
+#include "../../../../MultiTouch/DiligentLog/Primitives/interface/DefineGlobalFuncHelperMacros.h"
 
 /// Creates a texture from file
 
@@ -51,6 +51,6 @@ void DILIGENT_GLOBAL_FUNCTION(CreateTextureFromFile)(const Char*               F
                                                      IRenderDevice*            pDevice,
                                                      ITexture**                ppTexture);
 
-#include "../../../DiligentCore/Primitives/interface/UndefGlobalFuncHelperMacros.h"
+#include "../../../DiligentLog/Primitives/interface/UndefGlobalFuncHelperMacros.h"
 
 DILIGENT_END_NAMESPACE // namespace Diligent
