@@ -40,6 +40,8 @@ source_group("source" FILES ${SOURCE})
 source_group("include" FILES ${INCLUDE})
 source_group("interface" FILES ${INTERFACE})
 
+add_dependencies(Diligent-TextureLoader png-cmake zlib-cmake)
+
 target_link_libraries(Diligent-TextureLoader 
 PRIVATE 
     Diligent-BuildSettings 
@@ -48,10 +50,10 @@ PRIVATE
     Diligent-GraphicsEngineInterface 
     Diligent-GraphicsAccessories
     Diligent-GraphicsTools
-    LibJpeg 
-    LibPng 
+    LibJpeg
+    png-cmake
     LibTiff 
-    ZLib
+    zlib-cmake
 )
 
 set_target_properties(Diligent-TextureLoader PROPERTIES

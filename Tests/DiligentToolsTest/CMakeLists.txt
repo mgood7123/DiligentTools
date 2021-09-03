@@ -16,7 +16,7 @@ PRIVATE
     Diligent-TargetPlatform
     Diligent-TextureLoader
     Diligent-Common
-    LibPng
+    png-cmake
 )
 
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCE} ${INCLUDE})

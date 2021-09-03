@@ -10,6 +10,11 @@ endif()
 
 set(IMGUIZMO_QUAT_PATH ../ThirdParty/imGuIZMO.quat)
 
+if (DILIGENT_DEAR_IMGUI_FREETYPE)
+    set(DEAR_IMGUI_FREETYPE_INCLUDE ${DEAR_IMGUI_PATH}/misc/freetype/imgui_freetype.h)
+    set(DEAR_IMGUI_FREETYPE_SOURCE ${DEAR_IMGUI_PATH}/misc/freetype/imgui_freetype.cpp)
+endif()
+
 set(DEAR_IMGUI_INCLUDE
     ${DEAR_IMGUI_PATH}/imconfig.h
     ${DEAR_IMGUI_PATH}/imgui_internal.h
@@ -17,6 +22,7 @@ set(DEAR_IMGUI_INCLUDE
     ${DEAR_IMGUI_PATH}/imstb_textedit.h
     ${DEAR_IMGUI_PATH}/imstb_truetype.h
     ${DEAR_IMGUI_PATH}/misc/cpp/imgui_stdlib.h
+    ${DEAR_IMGUI_FREETYPE_INCLUDE}
 )
 
 set(DEAR_IMGUI_INTERFACE
@@ -25,10 +31,12 @@ set(DEAR_IMGUI_INTERFACE
 
 set(DEAR_IMGUI_SOURCE
     ${DEAR_IMGUI_PATH}/imgui.cpp
+    ${DEAR_IMGUI_PATH}/imgui_demo.cpp
     ${DEAR_IMGUI_PATH}/imgui_draw.cpp
     ${DEAR_IMGUI_PATH}/imgui_tables.cpp
     ${DEAR_IMGUI_PATH}/imgui_widgets.cpp
     ${DEAR_IMGUI_PATH}/misc/cpp/imgui_stdlib.cpp
+    ${DEAR_IMGUI_FREETYPE_SOURCE}
 )
 
 set(SOURCE
@@ -118,6 +126,11 @@ source_group("include" FILES ${INCLUDE})
 source_group("interface" FILES ${INTERFACE})
 source_group("imGuIZMO.quat" FILES ${IMGUIZMO_QUAT_SOURCE})
 
+if (DILIGENT_DEAR_IMGUI_FREETYPE)
+    set(DEAR_IMGUI_FREETYPE_LIBRARY freetype-cmake)
+    add_dependencies(Diligent-Imgui ${DEAR_IMGUI_FREETYPE_LIBRARY})
+endif()
+
 target_link_libraries(Diligent-Imgui
 PRIVATE
     Diligent-BuildSettings
@@ -126,6 +139,7 @@ PRIVATE
     Diligent-GraphicsEngineInterface
     Diligent-GraphicsAccessories
     Diligent-GraphicsTools
+    ${DEAR_IMGUI_FREETYPE_LIBRARY}
 )
 
 set_target_properties(Diligent-Imgui PROPERTIES
